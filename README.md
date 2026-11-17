@@ -1,20 +1,48 @@
-# Machine_Learning_Project
-This project, led by Federico Vargas, Andre Guichard, Exequiel, Jesus Lopez, Marco Raudales, serves as the final group project for the Master's in Big Data Science in the subject Machine Learning program at the University of Navarra. Leveraging advanced Machine Learning techniques, the project aims to develop system based recommendation models for classification, specifically targeting the classification of products for customers. The objective is to accurately classify customers based on their health-related attributes, enabling insurance companies to offer personalized insurance premiums. Through structured data preprocessing, model training, and evaluation processes, combined with real-world deployment strategies, the project aims to significantly contribute to insurance companies' ability to provide tailored healthcare coverage.
+# Insurance Customer Classification — Machine Learning
 
-Running the project
-To run the project, follow these steps:
+**Group project for the Executive Master in Big Data Science (Universidad de Navarra), Machine Learning module.**
+Team: Federico Vargas, André Guichard, Exequiel, Jesús López, Marco Raudales.
 
-1. Create a Virtual Environment with Python 3.10
-You can use your preferred tool for creating virtual environments.
+---
 
-2. Install Poetry in the Virtual Environment
-Follow the instructions at Poetry Official Documentation to install Poetry in your virtual environment.
+## Problem
 
-3. Install Project Dependencies
-Once Poetry is installed, navigate to your project directory and run the following command to install all project dependencies:
+Insurance companies want to offer personalised products and premiums. The goal was to classify customers into product categories from their health-related and demographic attributes, so the insurer can tailor its offer to each profile.
 
-poetry install
-This will read the pyproject.toml file and install all the dependencies required for the project.
+---
 
-4. Run Notebooks
-With all dependencies installed, you are now ready to run any notebook in the project.
+## Approach
+
+1. **Data cleaning** — missing values, types and outliers (PySpark + Pandas).
+2. **Statistical analysis** — exploratory analysis (Sweetviz) and identification of non-significant variables.
+3. **Feature engineering** — dropping weak variables, one-hot encoding of categoricals, scaling.
+4. **Modelling** — multi-output classification with **Random Forest** and **XGBoost**.
+5. **Evaluation** — accuracy, precision, recall, F1 and confusion matrices.
+
+---
+
+## Tech Stack
+
+```
+Python    Pandas · NumPy · PySpark · Scikit-learn · XGBoost · Sweetviz · Matplotlib · Seaborn · Plotly
+```
+
+---
+
+## How to Run
+
+```bash
+pip install pandas numpy pyspark scikit-learn xgboost sweetviz matplotlib seaborn plotly
+jupyter notebook Andre.ipynb
+```
+
+The dataset is not included in the repository.
+
+---
+
+## Project Structure
+
+```
+├── Andre.ipynb   # Cleaning, statistical analysis, feature engineering and modelling
+└── README.md
+```
